@@ -1,1 +1,42 @@
-<p>ebook-list works!</p>
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg mx-56">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+              <th scope="col" class="px-6 py-3">
+                  Titulo
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Autor
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Genero
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Formato
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Precio
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ebook of ebooks" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              {{ebook.title}}
+            </td>
+            <td class="px-6 py-4">
+              {{ebook.author}}
+            </td>
+            <td class="px-6 py-4">
+              {{ebook.genre}}
+            </td>
+            <td class="px-6 py-4">
+              {{ebook.format}}
+            </td>
+            <td class="px-6 py-4">
+              {{ebook.price}}
+            </td>
+        </tr>
+      </tbody>
+  </table>
+</div>

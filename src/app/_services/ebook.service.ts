@@ -15,4 +15,8 @@ export class EbookService {
   createEbook(ebook: CreateEbook): Observable<Object> {
     return this.http.post(`${this.baseUrl}/ebooks`, ebook);
   }
+
+  getEbooks(): Observable<Object> {
+    return this.http.get(`${this.baseUrl}/ebooks`);
+  }
 }
