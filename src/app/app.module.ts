@@ -10,6 +10,8 @@ import { SelectInputComponent } from './_components/select-input/select-input.co
 import { EbookListComponent } from './_pages/ebook-list/ebook-list.component';
 import { CreateEbookComponent } from './_pages/create-ebook/create-ebook.component';
 import { NavbarComponent } from './_components/navbar/navbar.component';
+import { EditEbookComponent } from './_pages/edit-ebook/edit-ebook.component';
+
 
 
 @NgModule({
@@ -18,8 +20,9 @@ import { NavbarComponent } from './_components/navbar/navbar.component';
     TextInputComponent,
     SelectInputComponent,
     CreateEbookComponent,
-    EbookListComponent,
     NavbarComponent,
+    EbookListComponent,
+    EditEbookComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,6 @@ import { NavbarComponent } from './_components/navbar/navbar.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,61 @@
+<div class="flex justify-center">
+  <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8">
+    <form class="max-w-sm mx-auto" [formGroup]="forms" (ngSubmit)="onSubmit()">
+      <div class="mb-5">
+        <app-text-input
+          [label]="'Título'"
+          [placeholder]="'Ej: Dune'"
+          [formControlName]="'title'"
+          [requiredMessage]="'Se requiere del título del libro'">
+        </app-text-input>
+      </div>
+
+      <div class="mb-5">
+        <app-text-input
+            [label]="'Autor'"
+            [placeholder]="'Ej: Frank Herbert'"
+            [formControlName]="'author'"
+            [requiredMessage]="'Se rquiere del nombre del autor'"
+          >
+          </app-text-input>
+      </div>
+
+      <div class="mb-5">
+        <app-text-input
+          [label]="'Genero'"
+          [placeholder]="'Ej: Ficcion'"
+          [formControlName]="'genre'"
+          [requiredMessage]="'Se requiere del género del libro'">
+        </app-text-input>
+      </div>
+
+      <div class="mb-5">
+        <app-text-input
+          [label]="'Formato'"
+          [placeholder]="'Ej: Ebook'"
+          [formControlName]="'format'"
+          [requiredMessage]="'Se requiere del formato del libro'">
+        </app-text-input>
+      </div>
+
+      <div class="mb-5">
+        <app-text-input
+          [label]="'Precio'"
+          [placeholder]="'Ej: 15000'"
+          [formControlName]="'price'"
+          [requiredMessage]="'Se requiere del precio del libro'">
+        </app-text-input>
+      </div>
+
+      <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Editar libro</button>
+    </form>
+    <!-- Mostrar mensajes de error si los hay -->
+    <div *ngFor="let errorMessage of errorMessages" class="text-red-600 mt-5">
+      {{ errorMessage }}
+    </div>
+    <div *ngFor="let validMessage of validMessages" class="text-green-600 mt-5">
+      {{ validMessage }}
+    </div>
+  </div>
+</div>
+
